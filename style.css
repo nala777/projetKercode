@@ -1,0 +1,907 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bleu: #368ef9;
+}
+
+
+body {
+  background-color: var(--bleu);
+
+}
+
+
+main {
+
+  color: white;
+}
+
+/* ---------------Pour les écrans trop grand------------------ */
+
+.container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+p{
+  font-size: 1.9rem;
+}
+
+.bleu {
+  background-color: var(--bleu);
+}
+
+ul {
+  list-style: none;
+}
+
+h2 {
+  text-transform: uppercase;
+  font-size: 1.1rem;
+}
+
+
+
+
+
+/* -------------------------Header--------------------- */
+header {
+  background-color: black;
+  align-items: center;
+  height: 100px;
+}
+/* paramètre du header */
+
+#bandeau-haut {
+  width: 100%;
+  background-color: black;
+  display: flex;
+  flex-wrap: wrap;
+  position: fixed;
+  height: 95px;
+  align-content: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+/* placement logo */
+
+#logo {
+  position: absolute;
+  height: 100px;
+  width: auto;
+  right: 0px;
+}
+
+
+/* --------Menu Deroulant--------------------- */
+
+#menu-toggle {
+  opacity: 0;
+}
+
+/*---------------- Rotation des barres pour former la croix------------ */
+
+#menu-toggle:checked~.menu-btn>span {
+  transform: rotate(45deg);
+}
+
+#menu-toggle:checked~.menu-btn>span::before {
+  top: 0;
+  transform: rotate(0);
+}
+
+#menu-toggle:checked~.menu-btn>span::after {
+  top: 0;
+  transform: rotate(90deg);
+}
+/* lorsqu'on coche la checkbox qui est sous les span (affiche menu) */
+#menu-toggle:checked~.menu-deroulant {
+  visibility: visible;
+  left: 0;
+}
+
+.menu-btn {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 30px;
+  left: 40px;
+
+  width: 35px;
+  height: 40px;
+
+  cursor: pointer;
+  z-index: 1;
+}
+
+/* barre du menu burger (définit la taille des barres) */
+
+.menu-btn>span,
+.menu-btn>span::before,
+.menu-btn>span::after {
+  display: block;
+  position: absolute;
+
+  width: 100%;
+  height: 2px;
+
+  background-color: white;
+
+  transition-duration: .25s;
+}
+
+.menu-btn>span::before {
+  content: '';
+  top: -8px;
+}
+
+.menu-btn>span::after {
+  content: '';
+  top: 8px;
+}
+
+/* --------------------------Menu déroulant-------------------------------- */
+
+.menu-deroulant {
+  display: block;
+  position: absolute;
+  visibility: hidden;
+  top: 16px;
+  left: -100%;
+  text-align: center;
+  width: 50%;
+  height: 285px;
+  opacity: 0.85;
+
+  margin: 0;
+  padding: 80px 0;
+
+  list-style: none;
+
+  background-color: black;
+  box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
+
+  transition-duration: .25s;
+}
+
+/* ------------------Apparence Liste du menu burger----------------- */
+
+.list {
+  display: block;
+  padding: 15px 8px;
+
+  color: white;
+
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  border-radius: 5px;
+  text-decoration: none;
+
+  transition-duration: .25s;
+}
+
+/* ---------------Au survol changement couleur---------------- */
+
+.list:hover {
+  background-color: var(--bleu);
+  color: white;
+}
+
+/* --------------------------------identifiant de connexion pour menu burger--------------------------- */
+
+.connexion p{
+  font-size: 1.3rem;
+}
+
+.identifiant {
+  padding: 3px 0;
+}
+
+.identifiant input {
+  border-radius: 3px;
+  border: none;
+  width: 140px
+}
+
+.identifiant input::placeholder {
+  padding: 2px 5px;
+}
+
+.btn-id button {
+  color: white;
+  background-color: var(--bleu);
+  width: 100px;
+  padding: 3px;
+  border: none;
+  border-radius: 3px;
+}
+
+#menu-ordi {
+  display: none;
+}
+
+/* ------------------Accueil----------------- */
+
+#accueil {
+  text-align: center;
+  color: white;
+  background-color: var(--bleu);
+}
+
+
+#accueil #image {
+  width: 100%;
+  box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, .2);
+}
+
+
+
+#accueil #bienvenue {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  margin: 15px 15px;
+}
+
+/* ------------------------entête-actu-accueil--------------------------- */
+#accueil #section-accueil {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  width: 95%;
+  margin: 0 15px;
+}
+
+
+#accueil #entete-actu {
+  display: flex;
+  justify-content: space-between;
+  margin: 5px 10px;
+  width: 100%;
+}
+
+#accueil #entete-actu #actu:hover {
+  border-bottom: 1px solid black;
+  justify-content: center;
+}
+
+
+
+
+
+/* -----------------------presentation article---------------------------- */
+
+#accueil #section-accueil .articles {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 10px 0;
+
+}
+
+#accueil #section-accueil .articles .image-article {
+  width: 80%;
+  margin: 0px auto;
+}
+
+#accueil #section-accueil .articles .para {
+  width: 70%;
+  margin: 15px auto;
+}
+
+#voir-plus {
+  width: 100%;
+}
+
+#bouton-voir {
+  display: block;
+  background-color: black;
+  color: white;
+  width: 80px;
+  border-radius: 10px;
+  margin: 10px auto
+}
+
+
+
+/* ---------------------------------Actualités----------------------- */
+
+#actualites {
+  margin: auto;
+  margin-bottom: 25px;
+  width: 90%;
+}
+
+
+
+#actualites h1 {
+  padding-top: 15px;
+  text-transform: uppercase;
+  width: 100%;
+}
+
+#actualites h2 {
+  text-transform: uppercase;
+  width: 100%;
+}
+
+#actualites #actu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+#actualites #actu .article {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+
+
+/* contenair de l'image de l'article pour préparer le hover pour pas de dépassement */
+
+.depassement {
+  overflow: hidden;
+}
+
+.over {
+  width: 100%;
+}
+
+.over img {
+  width: 100%;
+}
+
+/* ----------------------Zoom en hover de l'image de l'article--------------- */
+
+#actualites #actu .article img:hover {
+  transform: scale(1.1);
+  transition: 0.7s ease-in-out;
+}
+
+.date {
+
+  background-color: black;
+  color: white;
+  width: 133px;
+  height: 23px;
+  margin-top: 3px;
+}
+
+.article .date p {
+  font-size: 0.9rem;
+  margin: 4px;
+  text-align: center;
+}
+
+#actualites #actu .article h3 {
+  width: 90%;
+  /* text-transform: uppercase; */
+  font-size: 1.5rem;
+  margin: 10px 0;
+}
+
+#actualites #actu .article a {
+  display: block;
+  font-size: 1.5rem;
+  width: 170px;
+
+}
+
+#actualites #actu .article a:hover {
+  border-bottom: solid 1px Black;
+
+}
+
+/* -----------------------Page Simple Article------------------- */
+
+.post {
+  width: 100%;
+}
+
+/* -------------image de l'article en est le bandeau------------- */
+.post img {
+  width: 100%;
+}
+
+.post .container-post {
+  width: 80%;
+  margin: auto;
+}
+
+.post .container-post a {
+  font-size: 1.5rem;
+}
+
+.post .container-post i {
+  margin: 15px 0;
+}
+
+
+.post .container-post h1 {
+  margin: 45px 0;
+  font-size: 2rem;
+}
+
+.post .container-post p {
+  margin-bottom: 15px;
+  line-height: 1.6rem;
+  font-size: 1.4rem;
+}
+
+.contact h2 {
+  font-size: 1.8rem;
+  margin: 20px 0;
+  text-align: center;
+}
+
+#commentaire label {
+  font-size: 1.5rem;
+  width: 155px;
+}
+
+#commentaire textarea {
+  width: 280px;
+  height: 100px;
+}
+
+
+/* ----------------Organigramme---------------- */
+
+
+#contenu-orga {
+  margin: auto;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+}
+
+#contenu-orga h1 {
+  padding-top: 15px;
+}
+
+#contenu-orga h2 {
+  margin-bottom: -50px;
+}
+
+/* ---------------Positionne les card sur la page et permet le responsive-------------- */
+.organigramme {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  min-height: 475px;
+  padding-top: 60px;
+
+}
+
+.organigramme h3{
+  font-weight: bold;
+}
+
+.organigramme p{
+  font-size: 1.2rem;
+}
+
+/* ------------contenair card------------------- */
+
+.card-container .card {
+  position: relative;
+  max-width: 262px;
+  height: 340px;
+  background-color: black;
+  margin: 30px 10px;
+  padding: 20px 15px;
+  margin-top: 110px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+  transition: 0.3s ease-in-out;
+  border-radius: 15px;
+}
+
+/* ------------image de la card---------- */
+
+.card-container .card .image {
+  position: relative;
+  width: 260px;
+  height: 260px;
+  top: -40%;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+/* ----------Image card-------------- */
+.card-container .card .image img {
+  max-width: 100%;
+  border-radius: 15px;
+}
+
+/* ------------------Place le contenu de la carte (texte)--------- */
+.card-container .card .contenu-card {
+  position: relative;
+  top: -96px;
+  padding: 10px 15px;
+  color: white;
+  text-align: center;
+  opacity: 1;
+  visibility: visible;
+  transition: 0.3s ease-in-out;
+
+}
+
+/* -----------------------Contact------------------------- */
+
+#contenu {
+  margin: auto;
+  color: white;
+  background-color: var(--bleu);
+
+}
+
+/* --------Formulaire Contact------------ */
+
+.contact {
+  padding: 20px;
+  margin: 0 auto;
+  width: 90%;
+  /* text-align: center; */
+}
+
+.contact h1 {
+  font-size: 1.8rem;
+  margin: 20px 0;
+  text-align: center;
+}
+
+.contact p {
+  margin: 10px 0;
+  text-align: center;
+}
+
+.contact label {
+  display: inline-block;
+  width: 80px;
+  vertical-align: top;
+  /* pour le message*/
+}
+
+.contact input {
+  padding: 7px;
+  cursor: pointer;
+  border: none;
+  border-radius: 3px;
+}
+
+.contact textarea {
+  width: 237px;
+  padding: 7px;
+  border: none;
+  border-radius: 3px;
+}
+
+/* Bouton envoie formulaire */
+.contact input[type=submit],
+.contact input[type=reset] {
+  background-color: black;
+  color: white;
+  border: none;
+  /* border: 1px solid var(--bleu); */
+  margin: 0 5px;
+  padding: 10px 15px;
+  border-radius: 3px;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+}
+
+
+#carte {
+  width: 100%;
+  margin: auto;
+}
+
+
+
+
+/* ----------------Footer------------------ */
+footer {
+  background-color: black;
+}
+
+
+.bandeau-bas {
+
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.bandeau-bas nav {
+  width: 190px;
+  text-align: center;
+  justify-content: center;
+  margin: auto;
+
+
+}
+
+footer nav ul {
+  margin-bottom: 5px;
+}
+
+footer nav ul .list {
+  padding: 3px 8px;
+}
+
+/* -------------------------------Menu-footer----------------- */
+
+.bandeau-bas nav ul {
+  list-style: none;
+}
+
+/* -------------------------réseaux footer--------------- */
+
+#reseaux {
+  display: flex;
+  width: 100%;
+  margin-top: 15px;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Taille couleur icone reseaux */
+
+.bandeau-bas #reseaux a i {
+  color: white;
+  font-size: 2rem;
+  display: block;
+  margin: 0 5px;
+}
+
+/* -----------------Adresse Footer---------------- */
+
+footer a {
+  color: white;
+}
+
+footer #info {
+  color: white;
+  margin: 10px 0;
+}
+
+
+/* -----------------------Logo footer-------------------- */
+
+.bandeau-bas #logo-bas {
+  margin: auto;
+  width: 100%;
+}
+
+/* ----------------------Copyright footer---------------- */
+
+#copyright {
+  color: white;
+  width: 100%;
+  background-color: var(--bleu);
+  text-transform: uppercase;
+  margin-top: 15px;
+  text-align: center;
+  font-size: 0.8rem;
+  padding: 10px 0;
+}
+
+.bandeau-bas #copyright a {
+  color: white;
+}
+
+@media screen and (min-width:768px) {
+
+  /* Position articles en tablette */
+  #accueil #section-accueil .articles {
+    margin: 10px auto;
+    width: 40%;
+  }
+
+  /* ----------------Page Article------------------- */
+
+  #actu {
+    display: flex;
+    width: 100%;
+  }
+
+  .article {
+    width: 45%;
+  }
+
+  /* ------------Espace commentaire--------------- */
+
+  #commentaire textarea {
+    width: 450px;
+    height: 100px;
+  }
+
+  /* Direction en tablette élément footer */
+
+  .bandeau-bas {
+    flex-direction: row;
+  }
+
+  /* Taille élément du footer */
+
+  /* --------menu -----------------*/
+  footer nav {
+    width: 45%;
+    margin: auto;
+  }
+
+  /* ----------------logo --------------*/
+  .bandeau-bas #logo-bas {
+    width: 45%;
+    margin: auto;
+  }
+
+  /* -------------------------réseaux footer--------------- */
+
+  #reseaux {
+    width: 45%;
+    margin: auto;
+  }
+
+  /* -----------------Adresse Footer---------------- */
+
+  .bandeau-bas nav {
+    width: 45%;
+    margin: auto;
+  }
+
+  /* -----------------------Logo footer-------------------- */
+
+  footer #info {
+    width: 45%;
+    margin: auto;
+  }
+
+
+}
+
+@media screen and (min-width:992px) {
+
+  #bandeau-haut {
+    /* ---------Position Menu au centre------------- */
+    position: relative;
+  }
+
+  .menu-burger {
+    display: none;
+  }
+
+  #menu-ordi{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  #menu-grand {
+    display: flex;
+    justify-content: space-between;
+
+  }
+
+  /* .menu-grand . */
+
+  #menu-grand-list{
+    font-size: 1.5rem;
+  }
+
+  .connexion {
+    display: flex;
+    justify-content: center;
+  }
+
+  .connexion ul {
+    display: flex;
+  }
+
+  .connexion ul li {
+    padding: 0 4px;
+  }
+
+  .identifiant input {
+    width: 100px
+  }
+
+  #logo {
+    display: none;
+  }
+
+  /* -------------Changement organigramme avec un hover------------ */
+
+  .organigramme {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    min-height: 475px;
+    padding-top: 110px;
+  }
+
+  .card-container {
+    width: 262px;
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+  }
+
+  .card-container .card {
+    height: 215px;
+    margin: 30px 10px;
+  }
+
+  .card-container .card:hover {
+    height: 320px;
+  }
+
+  .card-container .card .contenu-card {
+    position: relative;
+    top: -140px;
+    padding: 10px 15px;
+    color: white;
+    text-align: center;
+
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+
+  }
+
+  /* -------------------------Rend le contenu(texte) Visible */
+
+  .card-container .card:hover .contenu-card {
+    margin-top: 30px;
+    visibility: visible;
+    opacity: 1;
+    transition-delay: 0.2s;
+
+  }
+}
+
+/* -------------------------Grand Ecran------------------ */
+@media screen and (min-width:1200px) {
+  .connexion {
+    padding-top: 0px;
+    margin-left: 300px;
+  }
+
+  .article {
+    width: 30%;
+  }
+
+  #accueil #section-accueil .articles {
+    width: 30%;
+  }
+
+  #contenu {
+    display: flex;
+  }
+
+  .contact {
+    width: 35%;
+  }
+
+  #carte {
+    width: 60%
+  }
+}

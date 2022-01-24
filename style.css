@@ -592,10 +592,9 @@ header {
 }
 
 /* Bouton envoie formulaire */
-.contact input[type=submit],
-.contact input[type=reset] {
+#formu-boutton {
   background-color: black;
-  color: white;
+  color: black;
   border: none;
   /* border: 1px solid var(--bleu); */
   margin: 0 5px;

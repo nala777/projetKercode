@@ -35,29 +35,8 @@
     
     </body>
 
-    <script src="js/monScript.js"></script>
+    <script src="js/api-gouv.js"></script>
     <script src="https://unpkg.com/@supabase/supabase-js"></script>
-    <script>
-        
-        const { createClient } = supabase
-        supabase = createClient("https://lgiewrqnswnktoynybbv.supabase.co", "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJvbGUiOiJhbm9uIiwiaWF0IjoxNjQyOTgxMDM3LCJleHAiOjE5NTg1NTcwMzd9.4ZRZRV6xMZbFJcAcnAnZewemYK85pbm5ZiydYsv_yCU")
-
-        const form = document.querySelector('#formu')
-        form.addEventListener('submit', async (event) => {
-            event.preventDefault()
-
-            const formInputs = form.querySelectorAll ('input, textarea')
-            let submission = {}
-
-            formInputs.forEach(element => {
-                const { value , name} = element
-                if (value) {
-                    submission[nom] = value
-                }
-            })
-
-            console.log(submission)
-        })
-    </script>
+    <script src="js/supabase.js"></script>
 
     </html>

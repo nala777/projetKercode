@@ -3,37 +3,38 @@
     <!-- ------------------Formulaire Contact------------- -->
     <div class="contact">
         <h1>Laissez-nous un message</h1>
-        <form action="envoyerform.php" method="post">
-            <p id="civi"> 
+        <form name="formulaire" id = "formu">
+            <!-- <p id="civi"> 
                 <label for="civilite" class="petit">M.</label> 
                 <input type="radio" id="civilite" name="civilite" class="civilite" value="M">
                 <label for="civilitee">Mme</label>
                 <input type="radio" id="civilitee" name="civilitee" class="civilite" value="Mme" checked>
                 
-            </p>
+            </p> -->
             <p>
                 <label for="nom">Votre Nom</label>
-                <input type="text" name="nom" id="nom" placeholder="tapez votre nom">
+                <input type="text" name="nom" id="nom" placeholder="tapez votre nom" required>
             </p>
             <p>
                 <label for="prenom">Votre Prénom</label>
-                <input type="text" name="prenom" id="prenom" placeholder="tapez votre prénom">
+                <input type="text" name="prenom" id="prenom" placeholder="tapez votre prénom" required>
             </p>
             <p>
-                <label for="email">Votre Email</label>
-                <input type="email" name="email" id="email" placeholder="tapez votre Email">
+                <label for="adresse">Votre Adresse Postale</label>
+                <input type="text" name="adresse" id="adresse" placeholder="tapez votre adresse postale" required>
+                <ul id="liste-adresse"></ul>
             </p>
             <p>
                 <label for="tel">Votre Téléphone</label>
-                <input type="tel" name="tel" id="tel" placeholder="06 45 45 45 45">
+                <input type="tel" name="tel" id="tel" placeholder="06 45 45 45 45" required>
             </p>
             <p>
                 <label for="message">Votre Message</label></p>
             <p>
-                <textarea name="message" rows="5" id="message" placeholder="votre message">
-                    </textarea>
+                <textarea name="message" rows="5" id="message" placeholder="votre message"></textarea>
             </p>
-            <p><input type="submit" value="Envoyer"><input type="reset" value="Annuler"></p>
+            <p><input type="submit" value="Envoyer"></p>
+            <!-- <input type="reset" value="Annuler"> -->
         </form>
     </div>
     

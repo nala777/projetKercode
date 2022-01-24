@@ -23,7 +23,7 @@
         <article class="articles">
             <img class="image-article" src="images-judo/article1.jpg" alt="Combat de Judo">
             <div class="para">
-                <h3>Titre article</h3>
+                <h3>Titre article 1</h3>
                 <p class="texte-article">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
             </div>
         </article>
@@ -31,7 +31,7 @@
         <article class="articles">
             <img class="image-article" src="images-judo/article2.jpg" alt="Jeune Fille Judo">
         <div class="para">
-                <h3>Titre article</h3>
+                <h3>Titre article 2</h3>
                 <p class="texte-article">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
             </div>
         </article>
@@ -39,7 +39,7 @@
         <article class="articles">
             <img class="image-article" src="images-judo/article3.jpg" alt="Combat Judo">
             <div class="para">
-                <h3>Titre article</h3>
+                <h3>Titre article 3</h3>
                 <p class="texte-article">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
             </div>
         </article>

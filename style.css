@@ -198,6 +198,8 @@ header {
   color: white;
 }
 
+
+
 /* --------------------------------identifiant de connexion pour menu burger--------------------------- */
 
 .connexion p{
@@ -592,9 +594,9 @@ header {
 }
 
 /* Bouton envoie formulaire */
-#formu-boutton {
+.formu-boutton {
   background-color: black;
-  color: black;
+  color: white;
   border: none;
   /* border: 1px solid var(--bleu); */
   margin: 0 5px;
@@ -801,7 +803,7 @@ footer #info {
 
   /* .menu-grand . */
 
-  #menu-grand-list{
+  .menu-grand-list{
     font-size: 1.5rem;
   }
 
@@ -824,6 +826,13 @@ footer #info {
 
   #logo {
     display: none;
+  }
+
+  /* --------------Class Active---------------- */
+
+  #menu-grand .active {
+    background-color: var(--bleu);
+    color: white;
   }
 
   /* -------------Changement organigramme avec un hover------------ */

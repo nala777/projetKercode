@@ -2,6 +2,7 @@ const { createClient } = supabase;
 supabase = createClient("https://lgiewrqnswnktoynybbv.supabase.co", "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJvbGUiOiJhbm9uIiwiaWF0IjoxNjQyOTgxMDM3LCJleHAiOjE5NTg1NTcwMzd9.4ZRZRV6xMZbFJcAcnAnZewemYK85pbm5ZiydYsv_yCU");
 
 const form = document.querySelector('#formu');
+console.log(form);
 form.addEventListener('submit', async (event) => {
     event.preventDefault()
 
@@ -15,7 +16,7 @@ form.addEventListener('submit', async (event) => {
         }
     })
 
-    console.log(submision)
+    
 
     const { error, data } = await supabase.from('formulaire').insert([submision]);
 

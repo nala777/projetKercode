@@ -8,6 +8,7 @@
     <title>Judo</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
     <link rel="stylesheet" href="style.css">
+    
 </head>
 
 <body>
@@ -52,7 +53,7 @@
                 <!-- -------------------Menu Grand Ecran---------------------- -->
                 <ul id="menu-ordi">
                     <div id="menu-grand" >              
-                        <li><a class="list menu-grand-list" href="index.php">Accueil</a></li>
+                        <li><a class="list menu-grand-list active" href="index.php">Accueil</a></li>
                         <li><a class="list menu-grand-list" href="actu.php">Actualités</a></li>
                         <li><a class="list menu-grand-list" href="orga.php">Organigramme</a></li>
                         <li><a class="list menu-grand-list" href="contact.php">Contact</a></li>

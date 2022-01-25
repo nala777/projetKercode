@@ -33,8 +33,8 @@
             <p>
                 <textarea name="message" rows="5" id="message" placeholder="votre message"></textarea>
             </p>
-            <p><button type="submit" id="formu-boutton">Envoyer</button></p>
-            <p><button type="reset" id="formu-boutton">Annuler</button></p>
+            <p><button type="submit" id="formu-boutton">Envoyer</button><button type="reset" id="formu-boutton">Annuler</button></p>
+            
         </form>
     </div>
     

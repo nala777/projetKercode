@@ -1,4 +1,6 @@
-<?php include('header.php'); ?>
+<?php include('header.php');
+require_once('class/Articles.php');
+require_once('class/actualite.php') ?>
 
 <main id="actualites" class="container">
     <!-- -----------------------Actualités-------------------- -->
@@ -6,17 +8,20 @@
         <h1>Actualités</h1>
         <h2>Judo Club</h2>
         <!-- ---------------Article-------------------- -->
-        <article class="article ">
-            <div class="over depassement">
-                <img src="images-judo/article1.jpg" alt="Combat de Judo">
-            </div>
-            <div class="date">
-                <p>23 novembre 2021</p>
-            </div>
-            <h3>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Amet, ratione!</h3>
-            <a href="article1.php">En savoir plus <i class="fas fa-long-arrow-alt-right"></i></a>
-        </article>
-        <!-- --------------Article 2-------------- -->
+        <?php foreach($articles->articles as $article) { ?>
+            
+            <article class="article ">
+                <div class="over depassement">
+                    <img src="images-judo/article<?= $article->id()?>.jpg" alt="Combat de Judo">
+                </div>
+                <div class="date">
+                    <p><?= $article->date?></p>
+                </div>
+                <h3><?= $article->accroche?></h3>
+                <a href="./article1.php?id=<?= array_search($article,$articles->articles)?>">En savoir plus <i class="fas fa-long-arrow-alt-right"></i></a>
+            </article>
+            <?php } ?>
+        <!---------------Article 2--------------
         <article class="article ">
             <div class="over depassement">
                 <img src="images-judo/article2.jpg" alt="Jeune Fille Judo">
@@ -26,8 +31,8 @@
             </div>
             <h3>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Amet, ratione!</h3>
             <a href="article2.php">En savoir plus <i class="fas fa-long-arrow-alt-right"></i></a>
-        </article>
-        <!-- --------------Article 3-------------- -->
+        </article> -->
+        <!-- --------------Article 3--------------
         <article class="article ">
             <div class="over depassement">
                 <img src="images-judo/article3.jpg" alt="Combat de Judo">
@@ -38,7 +43,7 @@
             <h3>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Amet, ratione!</h3>
             <a href="article3.php">En savoir plus <i class="fas fa-long-arrow-alt-right"></i></a>
         </article>
-        <!-- --------------Article 4-------------- -->
+        --------------Article 4--------------
         <article class="article ">
             <div class="over depassement">
                 <img src="images-judo/article4.jpg" alt="Homme Assis en Tenue de Judo">
@@ -49,7 +54,7 @@
             <h3>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Amet, ratione!</h3>
             <a href="article4.php">En savoir plus <i class="fas fa-long-arrow-alt-right"></i></a>
         </article>
-        <!-- --------------Article 5-------------- -->
+        --------------Article 5--------------
         <article class="article ">
             <div class="over depassement">
                 <img src="images-judo/article5.jpg" alt="Prise de Judo">
@@ -60,7 +65,7 @@
             <h3>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Amet, ratione!</h3>
             <a href="article5.php">En savoir plus <i class="fas fa-long-arrow-alt-right"></i></a>
         </article>
-        <!-- --------------Article 6-------------- -->
+        --------------Article 6--------------
         <article class="article ">
             <div class="over depassement">
                 <img src="images-judo/article6.jpg" alt="Prise de Judo">
@@ -71,7 +76,7 @@
             <h3>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Amet, ratione!</h3>
             <a href="article6.php">En savoir plus <i class="fas fa-long-arrow-alt-right"></i></a>
         </article>
-        <!-- --------------Article 7-------------- -->
+        --------------Article 7--------------
         <article class="article">
             <div class="over depassement">
                 <img src="images-judo/article7.jpg" alt="Enfant observant une scéance de judo">
@@ -82,7 +87,7 @@
             <h3>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Amet, ratione!</h3>
             <a href="article7.php">En savoir plus <i class="fas fa-long-arrow-alt-right"></i></a>
         </article>
-        <!-- --------------Article 8-------------- -->
+        --------------Article 8--------------
         <article class="article">
             <div class="over depassement">
                 <img src="images-judo/article8.jpg" alt="Entrainement de Judo">
@@ -93,7 +98,7 @@
             <h3>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Amet, ratione!</h3>
             <a href="article8.php">En savoir plus <i class="fas fa-long-arrow-alt-right"></i></a>
         </article>
-        <!-- --------------Article 9-------------- -->
+        --------------Article 9--------------
         <article class="article ">
             <div class="over depassement">
                 <img src="images-judo/article9.jpg" alt="Signe de respect">
@@ -103,7 +108,7 @@
             </div>
             <h3>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Amet, ratione!</h3>
             <a href="article9.php">En savoir plus <i class="fas fa-long-arrow-alt-right"></i></a>
-        </article>
+        </article>  -->
 
     </section>
 </main>

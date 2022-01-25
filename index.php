@@ -1,4 +1,7 @@
-<?php include('header.php'); ?>
+<?php 
+include('header.php'); 
+
+?>
 
 <main class="container" id="accueil">
     <!-- ----------------Bannière Index------------- -->

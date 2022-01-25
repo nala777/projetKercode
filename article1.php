@@ -1,15 +1,19 @@
-<?php include('header.php'); ?>
+<?php include('header.php'); 
+require_once('class/actualite.php');
+
+$index=(int)$_GET['id'];
+?>
 
 <main class="post container">
-    <!-- --------------Page Article 1-------------- -->
+    <!-- --------------Page Article-------------- -->
     <article>
             <div class="over depassement">
-                <img src="images-judo/article1.jpg" alt="Combat de Judo">
+            <img src="images-judo/article<?= $articles->articles[$index]->id()?>.jpg">
             </div>
             <div class="container-post">
             <a href="actu.php"><i class="fas fa-long-arrow-alt-left"></i> Retour</a>
-            <div class="date">23 Novembre 2021</div>
-            <h1>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti, harum.</h1>
+            <div class="date"><?= $articles->articles[$index]->date()?></div>
+            <h1><?= $articles->articles[$index]->accroche()?></h1>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi tempora
                 amet facilis omnis et, sunt doloribus aut recusandae similique maxime id
                 reiciendis beatae voluptatum, excepturi quis nisi? Corporis dolore, illo, sint blanditiis

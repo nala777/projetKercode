@@ -23,7 +23,7 @@ form.addEventListener('submit', async (event) => {
     if(error){
         alert('Il y a une Erreur , essayer à nouveau');
     }else{
-        alert('Merci de nous avoir contacter');
+        alert('Merci de nous avoir contacté');
     }
 
     formInputs.forEach(element => element.value= '');

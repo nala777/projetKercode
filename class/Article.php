@@ -2,9 +2,9 @@
 
 class Article{
 
-    public int $id;
-    public string $date;
-    public string $accroche;
+    private int $id;
+    private string $date;
+    private string $accroche;
 
 
     function __construct(int $id, string $date, string $accroche) {

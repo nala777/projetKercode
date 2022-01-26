@@ -12,12 +12,12 @@ require_once('class/actualite.php') ?>
             
             <article class="article ">
                 <div class="over depassement">
-                    <img src="images-judo/article<?= $article->id()?>.jpg" alt="Combat de Judo">
+                    <img src="images-judo/article<?= $article->id()?>.jpg" alt="">
                 </div>
                 <div class="date">
-                    <p><?= $article->date?></p>
+                    <p><?= $article->date()?></p>
                 </div>
-                <h3><?= $article->accroche?></h3>
+                <h3><?= $article->accroche()?></h3>
                 <a href="./article1.php?id=<?= array_search($article,$articles->articles)?>">En savoir plus <i class="fas fa-long-arrow-alt-right"></i></a>
             </article>
         <?php } ?>
